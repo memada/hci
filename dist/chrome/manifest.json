@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "HCI",
+  "description": "HCI project",
+  "version": "1.0",
+  "options_page": "app/option.html",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["app/extension.js"]
+    }
+  ]
+}

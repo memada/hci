@@ -51,14 +51,12 @@ var Pagination = (function() {
   }
 
   function collectAllSteps() {
-    var s = document.querySelectorAll("[data-type=step]");
-    for(var i = 0; i < s.length; i++) {
-      var currentElement = {
-        step: parseInt(s[i].getAttribute('data-step')),
-        elem: s[i]
-      };
-      steps.add(currentElement);
-    }
+    document.querySelectorAll("[data-type=step]").forEach(function(item){
+      steps.add({
+        step: parseInt(item.getAttribute('data-step')),
+        elem: item
+      });
+    });
   }
 
   Pagination.prototype.next = function(callback) {

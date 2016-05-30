@@ -3,15 +3,15 @@
   "name": "HCI",
   "description": "HCI project",
   "version": "1.0",
-  "options_page": "app/option.html",
+  "options_page": "app/settings.html",
   "permissions": [
     "storage",
     "activeTab"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["app/extension.js"]
-    }
   ]
+//  "content_scripts": [
+//    {
+//      "matches": ["<all_urls>"],
+//      "js": [""]
+//    }
+//  ]
 }

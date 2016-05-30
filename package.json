@@ -1,9 +1,0 @@
-{
-  "name": "HCI",
-  "version": "1.0.0",
-  "devDependencies": {
-    "gulp": "latest",
-    "gulp-coffee": "latest",
-    "gutil": "latest"
-  }
-}

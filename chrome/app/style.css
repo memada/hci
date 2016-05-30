@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.start {
+    margin-top: 25%;
+    text-align: center;
+}
+
+.start .container {
+   display: inline-block;
+}
+
+.start .container h1 {
+    font-size: 50px;
+}
+
+.start .container p {
+    font-size: 20px;
+}
+
+.start .container h1,
+.start .container p {
+    text-align: center;
+}
+
+.start .container .button {
+    margin-top: 30px;
+}
+
+.button {
+    background: #3c3c3c;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    text-decoration: underline;
+}
+
+.step {
+    display: none;
+}

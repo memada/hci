@@ -17,8 +17,25 @@ var Settings = (function() {
 
 var Steps = (function() {
   var steps = [];
-
   function Steps() {}
+
+  function makeElementVisible(elem) {
+    if(elem !== undefined) {
+      elem.elem.style.display = 'block';
+      if (elem.bullet !== undefined) {
+        elem.bullet.style.background = '#3c3c3c';
+      }
+    }
+  }
+
+  function hideElement(elem) {
+    if(elem !== undefined) {
+      elem.elem.style.display = 'none';
+      if (elem.bullet !== undefined) {
+        elem.bullet.style.background = 'white';
+      }
+    }
+  }
 
   Steps.prototype.add = function(elem) {
     steps.push(elem);
@@ -28,6 +45,16 @@ var Steps = (function() {
     return steps.find(function(item) {
       return item.step === stepNumber;
     })
+  };
+
+  Steps.prototype.next = function(step) {
+    hideElement(this.get(step));
+    makeElementVisible(this.get(step + 1));
+  };
+
+  Steps.prototype.prev = function(step) {
+    hideElement(this.get(step));
+    makeElementVisible(this.get(step - 1));
   };
 
   return Steps;
@@ -51,17 +78,27 @@ var Pagination = (function() {
   }
 
   function collectAllSteps() {
+    var bullets = [];
+    document.querySelectorAll("[data-type=bullet]").forEach(function(item) {
+      bullets[parseInt(item.getAttribute('data-step'))] = item;
+    });
     document.querySelectorAll("[data-type=step]").forEach(function(item){
       steps.add({
         step: parseInt(item.getAttribute('data-step')),
-        elem: item
+        elem: item,
+        bullet: bullets[parseInt(item.getAttribute('data-step'))]
       });
     });
   }
 
   Pagination.prototype.next = function(callback) {
-    steps.get(currentPage).elem.style.display = 'none';
-    steps.get(++currentPage).elem.style.display = 'block';
+    steps.next(currentPage);
+    currentPage++;
+  };
+
+  Pagination.prototype.prev = function() {
+    steps.prev(currentPage);
+    currentPage--;
   };
 
   return Pagination;

@@ -72,3 +72,30 @@ body {
     border-radius: 50px;
     display: inline-block;
 }
+
+.steps .arrow-right {
+    width: 0;
+    height: 0;
+    border: none;
+    border-radius: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #3c3c3c;
+    paddign-right:10px;
+    vertical-align: bottom;
+    margin-bottom: 2px;
+    cursor: hand;
+}
+
+.steps .arrow-left {
+    width: 0;
+    height: 0;
+    border: none;
+    border-radius: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right:10px solid #3c3c3c;
+    vertical-align: bottom;
+    margin-bottom: 2px;
+    cursor: hand;
+}

@@ -109,3 +109,11 @@ var pag = new Pagination();
 document.querySelector('#startBtn').addEventListener('click', function() {
   pag.next();
 });
+
+document.querySelector('#prevStep').addEventListener('click', function() {
+  pag.prev();
+});
+
+document.querySelector('#nextStep').addEventListener('click', function() {
+  pag.next();
+});

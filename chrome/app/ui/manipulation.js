@@ -1,5 +1,4 @@
 
-
 var manipulationModule = (function () {
     var employeeList = [];
 	
@@ -43,25 +42,3 @@ var manipulationModule = (function () {
 		changeTextFontFamily: changeTextFontFamily
     };
 } ());
-
-
-var Constants = {
-	ALIGN_LEFT : 'left',
-	ALIGN_RIGHT : 'right',
-	ALIGN_CENTER : 'center',
-	FONT_TIMES_NEW_ROMAN : '"Times New Roman", Times, serif',
-	FONT_GEORGIA : 'Georgia, serif',
-	FONT_ARIAL : 'Arial, Helvetica, sans-serif',
-	FONT_COMIC_SANS : '"Comic Sans MS", cursive, sans-serif'
-};
-
-$( document ).ready(function() {
-    manipulationModule.hideElements('img');
-	//manipulationModule.resizeElements('img');
-	manipulationModule.changeTextSize('.product-desc', 50);
-	manipulationModule.changeTextColor('.product-desc', '#FF0000');
-	manipulationModule.changeTextAligment('.product-desc', Constants.ALIGN_CENTER);
-	manipulationModule.changeTextFontFamily('.product-desc', Constants.FONT_COMIC_SANS);
-	
-	
-});

@@ -7,11 +7,11 @@
   "permissions": [
     "storage",
     "activeTab"
+  ],
+  "content_scripts": [
+    {
+     "matches": ["<all_urls>"],
+      "js": ["app/ui/jquery/jquery.min.js", "app/ui/jquery/jquery-ui.js", "app/ui/manipulation.js", "app/ui/constants.js", "app/ui/custom.js"]
+    }
   ]
-//  "content_scripts": [
-//    {
-//      "matches": ["<all_urls>"],
-//      "js": [""]
-//    }
-//  ]
 }

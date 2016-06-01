@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 body {
@@ -8,7 +13,7 @@ body {
 }
 
 .start {
-    margin-top: 30vh;
+    margin-top: 30vh !important;
     text-align: center;
 }
 
@@ -49,6 +54,48 @@ body {
 
 .step {
     display: none;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.step h1 {
+  margin-bottom: 20px;
+}
+
+.step .previewText {
+  font-size: 1em;
+  border: 1px solid #3c3c3c;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.step #previewFontFamily {
+    font-family: 'Arial', serif;
+}
+
+.step .previewText img {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    margin: 0 10px;
+}
+
+.step .previewText img:nth-child(2) {
+    float: right;
+}
+
+.step .controls select {
+  font-size: 40px;
+}
+
+.step .controls input[type=radio] {
+    vertical-align: middle;
+}
+
+.step .controls label {
+    font-size: 40px;
+    margin-right: 20px;
+    vertical-align: middle;
 }
 
 .steps {
@@ -67,10 +114,18 @@ body {
 
 .steps li {
     border: 2px solid #3c3c3c;
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
     border-radius: 50px;
     display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.steps li.active {
+  background: #3c3c3c;
+  color: white;
 }
 
 .steps .arrow-right {
@@ -78,13 +133,11 @@ body {
     height: 0;
     border: none;
     border-radius: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #3c3c3c;
-    paddign-right:10px;
-    vertical-align: bottom;
-    margin-bottom: 2px;
-    cursor: hand;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #3c3c3c;
+    vertical-align: middle;
+    display: none;
 }
 
 .steps .arrow-left {
@@ -92,10 +145,31 @@ body {
     height: 0;
     border: none;
     border-radius: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right:10px solid #3c3c3c;
-    vertical-align: bottom;
-    margin-bottom: 2px;
-    cursor: hand;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right:20px solid #3c3c3c;
+    vertical-align: middle;
+    display: none;
+}
+
+.steps .arrow-left:hover,
+.steps .arrow-right:hover {
+  cursor: hand;
+}
+
+.controls {
+  display: table;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.controls .plusBtn,
+.controls .minusBtn {
+  font-size: 50px;
+  width: 75px;
+  height: 75px;
+}
+
+.controls .plusBtn {
+  margin-right: 20px;
 }

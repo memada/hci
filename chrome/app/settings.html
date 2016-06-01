@@ -1,35 +1,174 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>HCI</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-    <div class="start step" data-type="step" data-step="0">
-        <div class="container">
-            <h1>Welcome to HCI</h1>
-            <p>
-                Description
-            </p>
-            <a href="#" class="button" id="startBtn">Start configuration</a>
-        </div>
+<div class="start" data-type="step" data-step="0">
+    <div class="container">
+        <h1>Welcome to HelpER</h1>
+        <p>
+            Description
+        </p>
+        <a href="#" class="button" id="startBtn">Start configuration</a>
     </div>
-    <div class="step" data-type="step" data-step="1">
-        <h1>Step 1</h1>
+</div>
+<div class="step" data-type="step" data-step="1">
+    <h1>1. Select font size</h1>
+    <p class="previewText" id="previewText">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+    <div class="controls">
+        <button class="plusBtn" id="plusBtn">+</button>
+        <button class="minusBtn" id="minusBtn">-</button>
     </div>
-    <div class="step" data-type="step" data-step="2">
+</div>
+<div class="step" data-type="step" data-step="2">
+    <h1>2. Select font family</h1>
+    <p class="previewText" id="previewFontFamily">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+    <div class="controls">
+        <select id="fontFamilySelector">
+            <option value="Arial">
+                Arial
+            </option>
+            <option value="Comic Sans MS">
+                Comic Sans MS
+            </option>
+            <option value="Courier New">
+                Courier New
+            </option>
+            <option value="Lucida Console">
+                Lucida Console
+            </option>
+            <option value="Times New Roman">
+                Times New Roman
+            </option>
+            <option value="Verdana">
+                Verdana
+            </option>
+            <option value="Tahoma">
+                Tahoma
+            </option>
+        </select>
+    </div>
+</div>
+<div class="step" data-type="step" data-step="3">
+    <h1>3. Do you wish to display images ?</h1>
+    <p class="previewText">
+        <img src="img/1583.png"/>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at autem beatae doloremque dolores earum eos esse
+        iste laboriosam magnam, maiores odit porro possimus recusandae reiciendis sint sit veritatis vero.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore doloremque ipsam numquam qui quia?
+        Architecto doloribus eius quisquam reiciendis totam. Beatae distinctio dolore dolores expedita necessitatibus,
+        quasi recusandae velit?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto commodi, debitis, et
+        eveniet illum inventore officia quae quis repudiandae sunt! Adipisci, atque odit quidem reiciendis unde
+        voluptatem voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at autem beatae doloremque dolores earum eos esse
+        iste laboriosam magnam, maiores odit porro possimus recusandae reiciendis sint sit veritatis vero.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore doloremque ipsam numquam qui quia?
+        Architecto doloribus eius quisquam reiciendis totam. Beatae distinctio dolore dolores expedita necessitatibus,
+        quasi recusandae velit?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto commodi, debitis, et
+        eveniet illum inventore officia quae quis repudiandae sunt! Adipisci, atque odit quidem reiciendis unde
+        voluptatem voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at autem beatae doloremque dolores earum eos esse
+        iste laboriosam magnam, maiores odit porro possimus recusandae reiciendis sint sit veritatis vero.
+        <img src="img/1583.png"/>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore doloremque ipsam numquam qui quia?
+        Architecto doloribus eius quisquam reiciendis totam. Beatae distinctio dolore dolores expedita necessitatibus,
+        quasi recusandae velit?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto commodi, debitis, et
+        eveniet illum inventore officia quae quis repudiandae sunt! Adipisci, atque odit quidem reiciendis unde
+        voluptatem voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at autem beatae doloremque dolores earum eos esse
+        iste laboriosam magnam, maiores odit porro possimus recusandae reiciendis sint sit veritatis vero.
+        <img src="img/1583.png"/>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore doloremque ipsam numquam qui quia?
+        Architecto doloribus eius quisquam reiciendis totam. Beatae distinctio dolore dolores expedita necessitatibus,
+        quasi recusandae velit?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto commodi, debitis, et
+        eveniet illum inventore officia quae quis repudiandae sunt! Adipisci, atque odit quidem reiciendis unde
+        voluptatem voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at autem beatae doloremque dolores earum eos esse
+        iste laboriosam magnam, maiores odit porro possimus recusandae reiciendis sint sit veritatis vero.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore doloremque ipsam numquam qui quia?
+        Architecto doloribus eius quisquam reiciendis totam. Beatae distinctio dolore dolores expedita necessitatibus,
+        quasi recusandae velit?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto commodi, debitis, et
+        eveniet illum inventore officia quae quis repudiandae sunt! Adipisci, atque odit quidem reiciendis unde
+        voluptatem voluptatibus.
+    </p>
+    <div class="controls">
+        <input type="radio" id="displayImages" name="displayImages" value="true" checked/> <label for="displayImages">Yes</label>
+        <input type="radio" id="hideImages" name="displayImages" value="false"/> <label for="hideImages">No</label>
+    </div>
+</div>
 
+<div class="step" data-type="step" data-step="4">
+    <h1>4. Space between lines</h1>
+    <p class="previewText">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+    <div class="controls">
+        <button class="plusBtn" id="linePlus">+</button>
+        <button class="minusBtn" id="lineMinus">-</button>
     </div>
+</div>
 
-    <div class="steps">
-        <ul>
-            <li class="arrow-left" id="prevStep"></li>
-            <li data-type="bullet" data-step="1"></li>
-            <li data-type="bullet" data-step="2"></li>
-            <li class="arrow-right" id="nextStep"></li>
-        </ul>
+<div class="step" data-type="step" data-step="5">
+    <h1>4. Space between words</h1>
+    <p class="previewText">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+    <div class="controls">
+        <button class="plusBtn" id="wordPlus">+</button>
+        <button class="minusBtn" id="wordMinus">-</button>
     </div>
+</div>
 
-    <script type="application/javascript" src="settings.js"></script>
+<div class="step start" data-type="step" data-step="6">
+    <div class="container">
+        <h1>Thank you. <br/> You finished the quiz.</h1>
+        <a href="#" id="finishConfig" class="button">I'm done</a>
+    </div>
+</div>
+
+<div class="steps">
+    <ul>
+        <li class="arrow-left" id="prevStep"></li>
+        <li data-type="bullet" data-step="1">1</li>
+        <li data-type="bullet" data-step="2">2</li>
+        <li data-type="bullet" data-step="3">3</li>
+        <li data-type="bullet" data-step="4">4</li>
+        <li data-type="bullet" data-step="5">5</li>
+        <li data-type="bullet" data-step="6">6</li>
+        <li class="arrow-right" id="nextStep"></li>
+    </ul>
+</div>
+
+<script type="application/javascript" src="settings.js"></script>
 </body>
+
 </html>

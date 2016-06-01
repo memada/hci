@@ -11,7 +11,9 @@
   "content_scripts": [
     {
      "matches": ["<all_urls>"],
-      "js": ["app/ui/jquery/jquery.min.js", "app/ui/jquery/jquery-ui.js", "app/ui/manipulation.js", "app/ui/constants.js", "app/ui/custom.js","app/audio/responsivevoice.js","app/audio/audio.js"]
+     "exclude_matches": ["*://edflfbboeecenmamenpibjimkmjklofh/app/settings.html"],
+	   "css": ["app/audio/menu.css","app/wheel/wheel.css"],
+      "js": ["app/lib/settings.js","app/ui/jquery/jquery.min.js", "app/ui/jquery/jquery-ui.js", "app/ui/constants.js", "app/ui/custom.js","app/audio/responsivevoice.js","app/audio/audio.js", "app/ui/manipulation.js","app/wheel/wheelnav.min.js" ,"app/wheel/raphael.min.js","app/wheel/raphael.icons.min.js","app/wheel/wheel.js"]
     }
   ]
 }

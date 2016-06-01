@@ -42,3 +42,38 @@ var manipulationModule = (function () {
 		changeTextFontFamily: changeTextFontFamily
     };
 } ());
+
+function textNodes() {
+  var	n, 
+  		walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);
+
+  while(n=walk.nextNode())  {
+  	n.parentElement.setAttribute('style', settings.asStyle());
+  }
+}
+
+function imagesNodes() {
+	Array.prototype.map.call(document.images, function(image) {
+		image.style.display = 'none';
+	});
+}
+
+var settings = new Settings();
+settings.getSettings().then(function () {
+	textNodes();
+	if(settings.get('displayImages') === false) {
+		imagesNodes();
+	}
+
+	new MutationObserver(function() {
+		textNodes();
+		if(settings.get('displayImages') === false) {
+			imagesNodes();
+		}
+	}).observe(document.body, {
+		attributes: false,
+		childList: true,
+		charactedData: false
+	});
+});
+

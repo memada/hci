@@ -18,6 +18,8 @@ a.onclick=function() {
   }
 document.body.appendChild(a);
 
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(document.createElement('br'));
 var a2 = document.createElement('a');
 var linkText2 = document.createTextNode("play selected!");
 a2.appendChild(linkText2);
@@ -28,6 +30,7 @@ a2.onclick=function () {
     responsiveVoice.speak(window.getSelection().toString());
   }
 document.body.appendChild(a2);
+
 
 var audio=document.createElement('audio')
 audio.className="speech";

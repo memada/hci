@@ -3,7 +3,7 @@ var nextBtn = document.querySelector('#nextStep'),
 
 var Settings = (function () {
     var currentSettings = {
-        fontSize: 1,
+        fontSize: 16,
         fontFamily: 'Arial',
         displayImages: true,
         lineHeight: 1.5,
@@ -38,10 +38,10 @@ var Settings = (function () {
     };
 
     Settings.prototype.asStyle = function() {
-      return "font-size: " + currentSettings.fontSize + "em; " +
+      return "font-size: " + currentSettings.fontSize + "px; " +
           "font-family: " + currentSettings.fontFamily + ";" +
-          "line-height: " + currentSettings.lineHeight + "em; " +
-          "word-spacing: " + currentSettings.wordSpacing + "em; ";
+          "line-height: " + currentSettings.lineHeight + "; " +
+          "word-spacing: " + currentSettings.wordSpacing + "px; ";
     };
 
     Settings.prototype.save = function() {
@@ -194,13 +194,13 @@ settings.getSettings().then(function() {
     });
 
     document.querySelector('#plusBtn').addEventListener('click', function () {
-        settings.set('fontSize', settings.get('fontSize') + 0.1);
-        previewText.style.fontSize = (settings.get('fontSize')) + "em";
+        settings.set('fontSize', settings.get('fontSize') + 1);
+        previewText.style.fontSize = (settings.get('fontSize')) + "px";
     });
 
     document.querySelector('#minusBtn').addEventListener('click', function () {
-        settings.set('fontSize', settings.get('fontSize') - 0.1);
-        previewText.style.fontSize = (settings.get('fontSize')) + "em";
+        settings.set('fontSize', settings.get('fontSize') - 1);
+        previewText.style.fontSize = (settings.get('fontSize')) + "px";
     });
 
     document.getElementById('fontFamilySelector').addEventListener('change', function (ev) {
@@ -224,22 +224,22 @@ settings.getSettings().then(function() {
 
     document.getElementById('linePlus').addEventListener('click', function() {
         settings.set('lineHeight', settings.get('lineHeight') + 0.1);
-        document.querySelector("[data-step='4']").querySelector('p').style.lineHeight = settings.get('lineHeight') + "em";
+        document.querySelector("[data-step='4']").querySelector('p').style.lineHeight = settings.get('lineHeight');
     });
 
     document.getElementById('lineMinus').addEventListener('click', function() {
         settings.set('lineHeight', settings.get('lineHeight') - 0.1);
-        document.querySelector("[data-step='4']").querySelector('p').style.lineHeight = settings.get('lineHeight') + "em";
+        document.querySelector("[data-step='4']").querySelector('p').style.lineHeight = settings.get('lineHeight');
     });
 
     document.getElementById('wordPlus').addEventListener('click', function() {
-        settings.set('wordSpacing', settings.get('wordSpacing') + 0.1);
-        document.querySelector("[data-step='5']").querySelector('p').style.wordSpacing = settings.get('wordSpacing') + "em";
+        settings.set('wordSpacing', settings.get('wordSpacing') + 1);
+        document.querySelector("[data-step='5']").querySelector('p').style.wordSpacing = settings.get('wordSpacing') + "px";
     });
 
     document.getElementById('wordMinus').addEventListener('click', function() {
-        settings.set('wordSpacing', settings.get('wordSpacing') - 0.1);
-        document.querySelector("[data-step='5']").querySelector('p').style.wordSpacing = settings.get('wordSpacing') + "em";
+        settings.set('wordSpacing', settings.get('wordSpacing') - 1);
+        document.querySelector("[data-step='5']").querySelector('p').style.wordSpacing = settings.get('wordSpacing') + "px";
     });
 
     document.getElementById('finishConfig').addEventListener('click', function(){

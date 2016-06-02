@@ -8,7 +8,9 @@ $( document ).ready(function() {
 	//manipulationModule.changeTextAligment('p', Constants.ALIGN_CENTER);
 	//manipulationModule.changeTextFontFamily('p', Constants.FONT_COMIC_SANS);
 	
-	manipulationModule.resizeElements('img');
+	//manipulationModule.resizeElements('img');
+
+
 
 	var holdyDiv = $('<ul class=\"custom-menu\"><li data-action=\"first\"><img src=\"http://files.softicons.com/download/toolbar-icons/flatastic-icons-part-1-by-custom-icon-design/ico/delete1.ico\" /></li><li data-action=\"second\"><img src=\"https://cdn1.iconfinder.com/data/icons/flat-web-browser/100/add-button-512.png\" /></li> <li data-action=\"third\"><img src=\"http://www.iconsdb.com/icons/preview/black/minus-5-xxl.png\" /></li><li data-action=\"fourth\"><img src=\"http://downloadicons.net/sites/default/files/video-play-icon-90356.png\"/></li></ul>').attr('id', 'holdy');
 	holdyDiv.appendTo('body');
@@ -64,6 +66,7 @@ $( document ).ready(function() {
 			case "fourth": 
 				var txt = selectedElement.text();
 				alert(txt);
+				//responsiveVoice.speak(txt);
 				//selectedElement.children().css(" font-weight", 'bold');
 				break;
 		}
